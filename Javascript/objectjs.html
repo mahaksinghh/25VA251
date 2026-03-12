@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object in JS</title>
+</head>
+<body>
+    <script>
+        //obejct in JS:collection(pair) of keys(properties) and its value
+
+        //create an object using literal way....
+
+        //in js array is collection of any datatype
+
+        let student={
+            name:"Mahak",
+            age:19,
+            isMarried:false,
+            address:{
+                area:"Indrapuram",
+                city:"GZB",
+                pincode:201002,
+            },
+            course:"B.Tech",
+            branch:"CSE",
+            year:2025,
+            getInfo:function(){
+                return "My education details are " + student.branch;
+            },
+            subjects:["Maths","English","Physics"],
+            examdonone:null
+
+        };
+        //access object's keys or property
+        console.log(student.address.pincode);//object
+        console.log(student.getInfo());//function
+        //find any key in your object
+        console.log('name' in student);
+
+        //delete any key from object
+        console.log(delete student.name);
+        console.log(student);
+
+        //find length of object
+        let keysLength=Object.keys(student);
+        console.log(keysLength.length);
+
+        //iterate object's key(properties)
+        for(let i=0;i<keysLength.length;i++){
+            console.log(student[keysLength[i]]);
+        }
+        //iterate object's key(properties) using for in loop
+        for(let x in student){
+            console.log(student[x]);//x yha pr index value ki trh kaam krega
+        }
+        //create an object using new keyword
+        let myInfo=new Object();
+        myInfo.name="Vikas";
+        myInfo.age=23;
+        myInfo.city="Delhi";
+        myInfo.mobile=78764564698;
+        //access object's key using bracket
+        console.log(myInfo.name);//(myInfo['name']);
+        
+    </script>
+</body>
+</html>
