@@ -141,6 +141,60 @@ catch(error){
 }
 }
 productDetail();
+
+//IIFE:- s a JavaScript function that runs as soon as it is defined. 
+(function(){
+    console.log("HELLO IIFE");
+})();
+    //short code for above function
+    (msg=>console.log("IIFE"))();
+    console.log(typeof(msg));
+
+ //Local storage:- allows developers to store persistent data as key-value pairs within a user's browser.
+
+ let myInfo={
+    name: "Mahak",
+    age: 19,
+    address: "Ghaziabad",
+    email: "mahak@gmail.com",
+    mob: 4569873,
+ };
+ //convert object into JSON string
+ let myInfoData=JSON.stringify(myInfo);
+
+ //set the data
+ localStorage.setItem('preferences',myInfoData);
+
+//get data (retrieve data)
+ let myPreference=localStorage.getItem('preferences');
+
+//convert into JSON object
+let myInfoPre=JSON.parse(myPreference);
+
+//access keys
+console.log(myInfoPre.name);
+
+//High order functions
+
+//map() creates a new array by applying a provided function to every element in the original array, which remains unchanged.
+
+let num=[5,8,6,3,2,9,7,4,3];
+let result=num.map(n=>n*2);
+console.log(result);
+
+//reduce(): Accumulates the array elements into a single value.
+
+let sum=num.reduce((total,n)=>total+n);
+console.log(sum); //47
+
+//filter (best for sorting)
+let sorting=num.filter(n=>n>3);
+console.log(sorting);
+
+//forEach(): Executes a provided function once for each array element, typically for performing side effects (like logging to the console). It does not return a new array.
+num.forEach((n)=>console.log(n*n));
+console.log(`Updated array is ${num}`);
+    
     </script>
 </body>
 </html>
