@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statements in JS</title>
+</head>
+<body>
+    <script>
+        //JavaScript provides several ways to execute different blocks of code based on whether a condition is true or false. These are known as conditional statements and include if, else, else if, switch, and the ternary operator. 
+
+        //if else......
+        let age=22;
+        if(age>=18){
+            console.log("Eligible for vote casting");
+        }
+        else
+        console.log(" not eligible ");
+
+        //switch statement:A switch statement in JavaScript evaluates a single expression and executes different code blocks based on strict equality (===) matches with various case values.
+
+        let grade='C';
+        switch(grade){
+            case'A':result = "First Division";
+            break;
+            case'B':result="Second Division";
+            break;
+            default:result="Fail";
+       }
+       console.log(result);
+
+       //if else if--if...else if statements are used to test multiple conditions in a sequence
+
+       let marks=79;
+       if(marks<=33){
+        console.log("Grade Third");
+       }
+       else if(marks>33 && marks<60){
+        console.log("Grade Second")
+       }
+       else{
+        console.log("Grade First");
+       }
+       let subjectMarks=[v1, v2, v3, v4, v5];
+       let sum=0;
+       for(let i=0;i<subjectMarks;i++){
+            sum+=subjectMarks[i];
+       }
+       console.log(sum);
+       console.log(sum)
+    
+    </script>
+</body>
+</html>

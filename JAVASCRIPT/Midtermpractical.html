@@ -1,0 +1,42 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mid term 1 practical</title>
+    <meta charset="UTF-8">
+    <title>Mid term 1 practical</title>
+    
+</head>
+<style>
+        #myPara {
+            display: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+<body>
+
+    <button id="showBtn">Click to Show Paragraph</button>
+    <p id="myPara">Hover over me to change my color!</p>
+
+    <script>
+        const btn = document.getElementById("showBtn");
+        const para = document.getElementById("myPara");
+
+        btn.addEventListener("click", function() {
+            para.style.display = "block";
+        });
+
+        para.addEventListener("mouseover", function() {
+            para.style.color = "red";
+        });
+
+        para.addEventListener("mouseout", function() {
+            para.style.color = "black";
+        });
+    </script>
+
+</body>
+</html>
+

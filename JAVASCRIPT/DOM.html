@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM in JS</title>
+</head>
+<body>
+    <p></p>
+    <!-- The Document Object Model (DOM) is a programming interface (API) for HTML and XML documents. 
+     It represents the structure of a web page as a tree of objects, allowing JavaScript to access, manipulate, and change the content, structure, and style of the page dynamically -->
+    <h2>Check your age to cast the vote</h2>
+     <form action="">
+        <input type="number" placeholder="enter your age !" name="age" id="age" />
+        <input type="submit" value="submit" onclick="result()"/>
+    </form>
+    <input type="text" placeholder="Enter your name" id="inputData"/>
+    <h2 id="text"></h2>
+    <button ondblclick="changeColor()">Click on me!</button>
+    <script>
+        /* function result(){
+            let myAge=document.getElementById('age').value;
+            if(myAge>=18){
+                alert("eligible");
+            }
+            else{
+                alert("not eligible");
+            }
+        } */
+
+        function changeColor(){
+            let inputValue=document.getElementById("inputData").value;
+            let inputText=document.getElementById('text');
+             inputText.innerhtml=inputValue;
+            inputText.style.color="red";
+            //random color
+
+            inputText.style.backgroundColor
+        }
+        //change para color using addeventlistener method
+        
+    </script>
+</body>
+</html>
